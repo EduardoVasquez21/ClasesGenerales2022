@@ -142,7 +142,7 @@ public class FrmConsultBD extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void carga(){
-            /*String titulos [] = {"Nombre","Apellido"};
+            String titulos [] = {"Nombre","Apellido"};
         //Ejemplosdearreglos
         Double numero [] = new Double [3];
         DefaultTableModel df = new DefaultTableModel(null,titulos);
@@ -168,9 +168,9 @@ public class FrmConsultBD extends javax.swing.JFrame {
         //}
             }
         
-        jTable1.setModel(df);*/
+        jTable1.setModel(df);
         
-            
+          /*  
             //MostrarNotas,Alumnos,Materias
             String titulos [] = {"NOMBRE","NOMBREMATERIA","NOTAS"};
         //Ejemplosdearreglos
@@ -201,7 +201,7 @@ public class FrmConsultBD extends javax.swing.JFrame {
         
         jTable1.setModel(df);
         
-    
+    */
     
     }
     

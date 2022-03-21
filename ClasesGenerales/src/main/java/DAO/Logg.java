@@ -30,7 +30,7 @@ public class Logg {
 
             listado = new ArrayList<LogginVM>();
 
-            CallableStatement cb = conexion.prepareCall("{call SP_I_USER()}");
+            CallableStatement cb = conexion.prepareCall("{call SP_I_USER(?,?)}");
             ResultSet resultado = cb.executeQuery();
 
             while (resultado.next()) {
@@ -52,17 +52,17 @@ public class Logg {
     public void AddUser(Usuario es) {
         try {
             Connection conexion = con.getConecction();
-            //Estudiante est = new Estudiante();
+            
 
-            CallableStatement cb = conexion.prepareCall("{call SP_I_LOGIN(?,?)}");
+            CallableStatement cb = conexion.prepareCall("{call SP_I_USER(?,?)}");
             cb.setString("PrUser", es.getUser());
-            cb.setString("PPassword", es.getPassword());
+            cb.setString("PPASSWORD", es.getPassword());
             cb.execute();
 
-            JOptionPane.showMessageDialog(null, "Persona Agregada", "Mensaje sistems", 1);
+            JOptionPane.showMessageDialog(null, "Usuario agregado correctamente", "Mensaje sistems", 1);
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error" + ex.toString(), "Mensaje sistems", 1);
+            JOptionPane.showMessageDialog(null, "Error, algo anda mal" + ex.toString(), "Mensaje sistems", 1);
         }
 
     }

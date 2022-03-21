@@ -106,13 +106,13 @@ public class Log extends javax.swing.JFrame {
         String Password = txtpassword.getText();
 
         // String pass = new String(txtPassword.getPassword());
-        var variablecontedoradeconsultabd = est.LogEstudiantes(Usuario, Password);
+        var consultabd = est.LogEstudiantes(Usuario, Password);
 
         if (txtname.getText().equals("") || txtpassword.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "HAY CAMPOS VACIOS");
+            JOptionPane.showMessageDialog(null, "Llene todos los campos");
         } else {
 
-            if (variablecontedoradeconsultabd == true) {
+            if (consultabd == true) {
                 JOptionPane.showMessageDialog(null, "Bienvenido " + txtname.getText());
                 FrmMenu abrir = new FrmMenu();
                 abrir.setVisible(true);
