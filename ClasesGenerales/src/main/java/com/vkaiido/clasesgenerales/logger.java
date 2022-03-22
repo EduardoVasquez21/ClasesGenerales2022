@@ -124,10 +124,18 @@ public class logger extends javax.swing.JFrame {
 
     private void btnAccesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccesActionPerformed
         // TODO add your handling code here:
+        String contraseña = "";
+        
+        for (char caracter: jPasswordField1.getPassword()) {
+        contraseña += caracter;
+        
+        
+        }
+        
         
         user us = new user();
         us.setUser(jTextField1.getText());
-        us.setPassword(jPasswordField1.getText());
+        us.setPassword(contraseña);
         
         Logeos users = new Logeos();
         if(users.Logu(us)){
