@@ -36,7 +36,8 @@ public class Logeos {
          }
          switch(x){
          
-             case 1 : JOptionPane.showMessageDialog(null, "Bienvenido "+usu.getUser()+", con la contraseña xD: "+usu.getPassword());
+             case 1 : JOptionPane.showMessageDialog(null, "Bienvenido "+usu.getUser());
+             //+", con la contraseña xD: "+usu.getPassword()
              valid = true;
              break;
              
